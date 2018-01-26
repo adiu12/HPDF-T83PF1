@@ -1,10 +1,35 @@
-from flask import Flask
+from wit import Wit
+import requests
+from flask import Flask, request, redirect, render_template, make_response, abort, jsonify
+import json
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+
+access_token = os.environ.get("ACCESSTOKEN")
+
+client = Wit(access_token = access_token)
 
 app = Flask(__name__)
 
-# This line adds the hasura example routes form the hasura.py file.
-# Delete these two lines, and delete the file to remove them from your project
-from .hasura import hasura_examples
-app.register_blueprint(hasura_examples)
+@app.route("/", methods = ['POST'])
+def index():
+	
+	message_text = request.form['input']
 
-from .server import *
+	response = client.message(message_text)
+	respList = []
+		
+	for key, val in response['entities'].items():
+		if len(val)>0:
+			respList.append({'entityType':key,'entityValue': val[0]['value']})
+		
+	return json.dumps(respList)
+
+
+if __name__ == "__main__":
+	app.run()
