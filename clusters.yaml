@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: fridge28-hasura
+  data: null
+  kubeContext: fridge28
+  name: fridge28
