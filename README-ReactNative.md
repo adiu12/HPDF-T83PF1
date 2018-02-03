@@ -1,20 +1,20 @@
-# Instruction for using ReactNative code
-1. Hardware Requirements
- 8 GB (If you are going to use the emulator on your machine).
 
 
-2. Software Requirements
 
-*  Software                        Version
-*  Android studio (IDE)            2.2.3
-*  Android Sdk                     25.0.2
-*  Java                            1.8.0_121
-*  Node Js                         4.2.6
-*  NPM                             3.5.2
-* React native cli	              2.0.1
+
+ ## Software Requirements
+
+   Software              |         Version
+-----------------------  |   -------------------
+   Android studio (IDE)  |         2.2.3
+   Android Sdk           |         25.0.2
+   Java                  |         1.8.0_121
+   Node Js               |         4.2.6
+   NPM                   |         3.5.2
+  React native cli	      |         2.0.1
                                 
                                 
-3. React native setup
+ ## React native setup
 
 *	Download  the latest node js.
 * Run the downloaded .msi file and follow the prompts to install
