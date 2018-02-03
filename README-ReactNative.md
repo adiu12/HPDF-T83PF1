@@ -16,7 +16,7 @@
                                 
  ## React native setup
 
-*	Download  the latest node js.
+*	Download the latest node js.
 * Run the downloaded .msi file and follow the prompts to install
 *	Make sure that you  have installed Java Development Kit
 *	Download the Android Studio and the SDK tools. And run the .exe file
@@ -33,7 +33,12 @@
       * react-native run-android
 *	The sample project will be opened in the emulator.
 
+## How to use the Wit.ai app
 
+* To run the app download the index.js and wit.js file
+* Type an expression in the text-field
+* The app will return the recognized entity present in the text
+* If the app does not recognize the entity, then a user-friendly message will be displayed
 
 
 
