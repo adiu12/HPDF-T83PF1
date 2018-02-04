@@ -40,6 +40,6 @@
 * The app will return the recognized entity present in the text
 * If the app does not recognize the entity, then a user-friendly message will be displayed
 * The link of the apk is given here:
- https://drive.google.com/open?id=1CfwePqPqlLME0ivEkW1XTEPzgMfeQdFN
+ https://drive.google.com/open?id=1hCw3EckoEA5uEK7cgBLi2r5aCdQfQN7R
 
 
