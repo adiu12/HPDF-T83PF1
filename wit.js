@@ -38,14 +38,15 @@ type:'',
  
 <View style={{ backgroundColor:'white',height:40}}>
  <TextInput 
+  placeholder='  type here'
     underlineColorAndroid='transparent'
  onChangeText={(textInputValue1)=>{ this.setState({textInputValue1})}}/>
 </View>
 <TouchableOpacity
  onPress={()=>{
  this.setState({
-	 type:'EntityType:',
-	 val:'EntityValue:'
+	 type:'Entity types:',
+	 val:'Entity values:'
  })
 	 const formdata = new FormData();
      var value= this.state.textInputValue1;	 
@@ -69,12 +70,27 @@ type:'',
              catch(e){
 				 Alert.alert('type');
 			 }
-          */ 		 
-      this.setState({		  
-	   myobj1:JSON.stringify(responsejson[0].entityType).replace('"','').replace('"',''),
-	  myobj2:JSON.stringify(responsejson[0].entityValue).replace('"','').replace('"','')
-	  });    
-     
+          */
+		  var i;
+		  var f='';
+		  var v='';
+		  for(i=0;i<responsejson.length;i++) {
+			    f+=JSON.stringify(responsejson[i].entityType).replace('"','').replace('"','');
+				v+=JSON.stringify(responsejson[i].entityValue).replace('"','').replace('"','');
+                    if(i<responsejson.length-1)
+					{
+						f+=', ';
+                        v+=', ';
+					}						
+	  }
+	         this.setState({
+	    
+				 
+	     myobj1:f,
+	     myobj2:v
+	      
+		 
+});		 
 	  })
 	  .catch((error)=>{
 		  
