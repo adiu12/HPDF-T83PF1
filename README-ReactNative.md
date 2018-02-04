@@ -16,7 +16,7 @@
                                 
  ## React native setup
 
-*	Download the latest node js.
+*	Download the latest node js
 * Run the downloaded .msi file and follow the prompts to install
 *	Make sure that you  have installed Java Development Kit
 *	Download the Android Studio and the SDK tools. And run the .exe file
@@ -39,5 +39,7 @@
 * Type an expression in the text-field
 * The app will return the recognized entity present in the text
 * If the app does not recognize the entity, then a user-friendly message will be displayed
+* The link of the apk is given here:
+ https://drive.google.com/open?id=1CfwePqPqlLME0ivEkW1XTEPzgMfeQdFN
 
 
